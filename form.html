@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <h1>Travel Reservation Form</h1>
+        <h2>* denotes mandatory</h2>
+        <div>
+            <label for="name">Full Name*:</label>
+            <div>
+            <input type="text" id="name" required placeholder="Firstname Lastname">
+             </div>
+        </div>
+        <div><label for="email">Email Address*:
+        </label>
+        <div>
+    <input type="text" required>
+</div></div>
+    
+    <div><label for="tour">Select Package Tour*:</label>
+    
+ <div>       <select name="tour" id="tour" required>
+        <option value="goa">Goa</option>
+    </select>
+</div>
+    </div>
+             <div>
+                <label for="date">Arrival Date*:</label>
+             <div>
+                <input type="date" required>
+             </div>
+            </div>
+
+            <div>
+                
+                <label for="nump">Number of persons*:</label>
+            <div>
+                <input type="number" required>
+            </div>
+            </div>
+            <div>
+                <label for="type">What would you want to avail?*</label>
+               <div>
+                <input type="checkbox" id="boarding" name="boarding">
+                <label for="boarding">Boarding</label>
+          </div>
+            <div>
+          <input type="checkbox" id="food" name="food">
+                <label for="food">Fooding</label>
+           </div>
+           <div>
+                <input type="checkbox" id="sight" name="sight">
+                <label for="sight">Sight Seeing</label>
+           </div>
+                </div>
+
+                <div>
+                    <label for="code">Discount Coupon Code*:</label>
+                    <div>
+                        <input type="text">
+                    </div>
+                </div>
+                <div>
+                    <label for="terms">Terms and Conditions*</label>
+                    <div>
+                    <input type="radio"><label for="agree">I agree</label>
+                    <input type="radio"><label for="disagree">I disagree</label>
+                     </div>
+                </div>
+            
+                
+                <button type="submit">Complete Reservation</button>
+              </div>
+
+    </form>
+    
+</body>
+</html>
