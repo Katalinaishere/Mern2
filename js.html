@@ -1,0 +1,65 @@
+<!--Ushtrimi 3-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function displayMessage(event) {
+            event.preventDefault(); 
+
+
+            var emri = document.getElementById("emri").value;
+            var mbiemri = document.getElementById("mbiemri").value;
+
+            let height = document.getElementById("gjatesi").value;
+            let weight = document.getElementById("peshe").value;
+
+
+       
+            let bmi = (weight / ((height * height) / 10000)).toFixed(2);
+            let bmiMessage = '';
+            if (bmi < 18.6) {
+                bmiMessage = `Under Weight: <span>${bmi}</span>`;
+            } else if (bmi >= 18.6 && bmi < 24.9) {
+                bmiMessage = `Normal: <span>${bmi}</span>`;
+            } else {
+                bmiMessage = `Over Weight: <span>${bmi}</span>`;
+            }
+
+            // Kombinojmë mesazhin për emrin dhe mbiemrin me atë të BMI-së
+            var message = `Përshëndetje, unë jam ${emri} ${mbiemri}. BMI : ${bmiMessage}`;
+            document.getElementById("message").innerHTML = message;
+        }
+    
+
+    </script>
+</head>
+<body>
+    <form onsubmit="displayMessage(event)">
+        <!--Ushtrimi 3-->
+       
+        <label for="emri">Emri</label>
+        <input type="text" id="emri" name="emri" required>
+      
+     
+        <label for="mbiemri">Mbiemri:</label>
+         <input type="text" id="mbiemri" name="mbiemri" required>
+      
+
+        <!--Ushtrimi 4-->
+        <div>
+        <label for="gjatesi">Gjatesi:</label>
+        <input type="text" id="gjatesi">
+        <label for="peshe">Pesha:</label>
+        <input type="text" id="peshe">
+        </div>
+
+         <button type="submit">Submit</button>
+    </form>
+    <p id="message"></p>
+    <p id="bmi"></p>
+    
+</body>
+</html>

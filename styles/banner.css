@@ -10,7 +10,7 @@ body {
     overflow-x: hidden; 
 }
 
-header {
+.banner{
     background-image: url('/images/shoresea.jpg'); 
     background-size: cover;
     background-position: center;
